@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# kodey-react-native-sample
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository is an example Kodey.ai Coding Agent Workflow
 
-## Available Scripts
+## Objectives
 
-In the project directory, you can run:
+In this sample, we will explore how Kodey.ai can create projects for react.
 
-### `npm start`
+## Project Setup & Steps 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Signup for a new Kodey.ai account or login to your existing Kodey.ai environmenty (link-here)
+2. Configure your Kodey.ai integrations to the desired issue tracker and cloud git provider.
+3. Fork this repository, and clone it to the cloud git provider of your choosing (Github, Azure DevOps, Bitbucket)
+4. Create the sample issue / work item in your issue tracker. Copy and Paste the issue description from below.
+5. Execute the below prompt in the Kodey.ai chat UI
+6. Validate the commits and pull requests in your cloud git provider
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### SAMPLE PROMPT - Github Tools (Sample React Components for login and signup page)
+```
+    branch name to create: feature/login-signup
 
-### `npm test`
+    Information to agent: Do as the steps below are defined one by one. You are working in github repo so make sure to use tools related to github repo. Do not write comments in the code. Write the code logic inside the methods of classes. Don't leave placeholders in the code. You are being asked to write full code with no comments and no placeholders.
+    You are being asked to write full code with no comments and no placeholders. You are working in a react native project and you have to create components.
+    When generating code, make sure to use proper indentations and new lines. The code should be properly indented and new lines should be adjusted properly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Important Note to agent: Write full code with no comments and no placeholders. Write the full code logic inside the methods of classes. Don't leave placeholders in the code.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    step 1: Using GithubCreateNewBranch tool, Create a new branch with name <branch name to create> first and then do the steps below.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    step 2: using GithubCreateNewFile tool, Create a new file inside enlytai-react-sample-project/src/component directory that will have component for the signup screen. The file name should be SignupScreen.js.
+    Signup page should have signup form with username, email, password fields and a signup button. The signup button should be disabled if the username, email or password is empty.
+    Use proper styling and beautify the form. Use normal html for the fields and not any react components.
 
-### `npm run eject`
+    step 3: using GithubCreateNewFile tool, Create a new file inside enlytai-react-sample-project/src/component directory that will have component for the login screen. The file name should be LoginScreen.js.
+    Login page should have login form for username, password and a login button. The login button should be disabled if the username or password is empty. There should be option for forget password and signup link.
+    The signup link should navigate to the signup page created above. Use proper styling and beautify the form. Use normal html for the fields and not any react components.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    step 4: using webcrawler tool, understand how routing is done from https://www.geeksforgeeks.org/reactjs-router/ And then apply the understanding to route to newly created components. using AzureDevopsRepositoryGetFile tool, get the content of the file enlytai-react-sample-project/src/App.js and update the App.js file to have the links that navigates to singup and login page created above.
+    Also the App.js file should have detail about the company with some pictures and text. The company name is Enlytai. The company is a software development company. The company is located in New York, USA.
+    The App.js file should have links for login and signup page. The login link should navigate to the login page and the signup link should navigate to the signup page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    step 4: using GithubCreatePullRequest tool, create a new Pull Request from the above created branch with title "React Native Signup And Login Page".
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### SAMPLE PROMPT - Azure DevOps Tools (Salesforce APEX Inventory Management Project)
+```
+    branch name to create: feature/enlytai-react-sample-project
 
-## Learn More
+    Information to agent: Do as the steps below are defined one by one. You are working in azure repo so make sure to use tools related to azure repo.
+    Do not write comments in the code. Write the code logic inside the methods of classes. Don't leave placeholders in the code.
+    You are being asked to write full code with no comments and no placeholders. You are working in a react native project and you have to create components.
+    When generating code, make sure to use proper indentations and new lines. The code should be properly indented and new lines should be adjusted properly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Important Note to agent: Write full code with no comments and no placeholders. Write the full code logic inside the methods of classes. Don't leave placeholders in the code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Steps:
 
-### Code Splitting
+    step 1: Using AzureDevopsBranchesCreateBranch tool, Create a new branch with name <branch name to create> first and then do the steps below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    step 2: using BitBucketWriteCode tool, Create a new file inside enlytai-react-sample-project/src/component directory that will have component for the signup screen. The file name should be SignupScreen.js.
+    Signup page should have signup form with username, email, password fields and a signup button. The signup button should be disabled if the username, email or password is empty.
+    Use proper styling and beautify the form. Use normal html for the fields and not any react components.
 
-### Analyzing the Bundle Size
+    step 3: using BitBucketWriteCode tool, Create a new file inside enlytai-react-sample-project/src/component directory that will have component for the login screen. The file name should be LoginScreen.js.
+    Login page should have login form for username, password and a login button. The login button should be disabled if the username or password is empty. There should be option for forget password and signup link.
+    The signup link should navigate to the signup page created above. Use proper styling and beautify the form. Use normal html for the fields and not any react components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    step 4: using webcrawler tool, understand how routing is done from https://www.geeksforgeeks.org/reactjs-router/ And then apply the understanding to route to newly created components. using AzureDevopsRepositoryGetFile tool, get the content of the file enlytai-react-sample-project/src/App.js and update the App.js file to have the links that navigates to singup and login page created above.
+    Also the App.js file should have detail about the company with some pictures and text. The company name is Enlytai. The company is a software development company. The company is located in New York, USA.
+    The App.js file should have links for login and signup page. The login link should navigate to the login page and the signup link should navigate to the signup page.
 
-### Making a Progressive Web App
+    step 4: using AzureDevopsPullRequestsCreatePullRequest tool, create a new Pull Request from the above created branch with title "React Native Signup And Login Page".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    step 5: using AzureDevopsIssuesUpdateIssue tool, update the issue status to done.
+```
 
-### Advanced Configuration
+### SAMPLE PROMPT - Jira / Bitbucket (Making Project That hits API requests extract data and define serverless file)
+```
+    branch name to create: feature/apex-sample-project-v1
+    
+    Steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    branch name to create: feature/enlytai-react-sample-project
 
-### Deployment
+    Information to agent: Do as the steps below are defined one by one. You are working in bitucket repo so make sure to use tools related to azure repo.
+    Do not write comments in the code. Write the code logic inside the methods of classes. Don't leave placeholders in the code.
+    You are being asked to write full code with no comments and no placeholders. You are working in a react native project and you have to create components.
+    When generating code, make sure to use proper indentations and new lines. The code should be properly indented and new lines should be adjusted properly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    Important Note to agent: Write full code with no comments and no placeholders. Write the full code logic inside the methods of classes. Don't leave placeholders in the code.
 
-### `npm run build` fails to minify
+    Steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    step 1: Using BitBucketCreateNewBranch tool, Create a new branch with name <branch name to create> first and then do the steps below.
+
+    step 2: using BitBucketWriteCode tool, Create a new file inside enlytai-react-sample-project/src/component directory that will have component for the signup screen. The file name should be SignupScreen.js.
+    Signup page should have signup form with username, email, password fields and a signup button. The signup button should be disabled if the username, email or password is empty.
+    Use proper styling and beautify the form. Use normal html for the fields and not any react components.
+
+    step 3: using BitBucketWriteCode tool, Create a new file inside enlytai-react-sample-project/src/component directory that will have component for the login screen. The file name should be LoginScreen.js.
+    Login page should have login form for username, password and a login button. The login button should be disabled if the username or password is empty. There should be option for forget password and signup link.
+    The signup link should navigate to the signup page created above. Use proper styling and beautify the form. Use normal html for the fields and not any react components.
+
+    step 4: using webcrawler tool, understand how routing is done from https://www.geeksforgeeks.org/reactjs-router/ And then apply the understanding to route to newly created components. using BitBucketGetFileContent tool, get the content of the file enlytai-react-sample-project/src/App.js and update the App.js file to have the links that navigates to singup and login page created above.
+    Also the App.js file should have detail about the company with some pictures and text. The company name is Enlytai. The company is a software development company. The company is located in New York, USA.
+    The App.js file should have links for login and signup page. The login link should navigate to the login page and the signup link should navigate to the signup page.
+
+    step 4: using AzureDevopsPullRequestsCreatePullRequest tool, create a new Pull Request from the above created branch with title "React Native Signup And Login Page".
+
+    step 5: using AzureDevopsIssuesUpdateIssue tool, update the issue status to done.
+
+    step 6: Update this jira issue status to done.
+
+```
+
+## Once you have set the description of the issue in your relavant system. You need to use kodey UI Chat and execute below statement to get the work done. 
+
+### Github Issue and Github Repo
+```
+   Get the issue with id <issue_id> from github repo and do as the description of the issue says.
+```
+
+### Azure Repo Issue and Azure Repo
+```
+   Get the issue with id <issue_id> from azure repo and do as the description of the issue says.
+```
+
+### Jira Issue and Bitbucket Repo
+```
+   Get the issue with id <issue_id> from bitbucket repo and do as the description of the issue says.
+```
+
+## Confirming Successful Sample Outputs
+
+1. Confirm that the branch was created on the issue / work item
+2. Confirm that the code created in the associated pull request contains the following
+3. Confirm that the work item/issue/ticket in your relevant issue tracking platform is updated.
